@@ -1,11 +1,8 @@
 # Securing-an-Apache-Web-Server
 
 ## Objective
-[Brief Objective - Remove this afterwards]
 
-**Objective:** 
-
-Strengthen our Apache web server's defenses on Ubuntu by implementing comprehensive security measures. This will safeguard sensitive data, ensure uninterrupted service, and uphold the integrity of our system against potential threats. By proactively enhancing our server's security, we aim to provide a safer and more reliable environment for our users and stakeholders.
+Let's fortify our Apache web server on Ubuntu with strong security measures. This will protect sensitive data, keep our service running smoothly without interruptions, and maintain the integrity of our system against potential threats. By proactively boosting our server's security, we're committed to providing a safer and more reliable environment for our users and stakeholders.
 
 ### Skills Learned
 
