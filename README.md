@@ -29,9 +29,13 @@ Step 1 : Installing apache2
 
 ![installation](https://github.com/user-attachments/assets/94988259-0461-44de-b7ad-c5a0027821a9)
 
+<hr>
+
 Step 2 :  Secure Apache with a Firewall, Because it will Blocks unauthorized access to my server.
 
 ![ufw configuration   start apache2](https://github.com/user-attachments/assets/2917daef-2796-48d2-a045-b58855549541)
+
+<hr>
 
 Step 3 : Disable Directory Listing, first we will Open the Apache configuration file and Find the <Directory> section and change Options Indexes to Options -Indexes:
 Why: Prevents hackers from browsing your files.
@@ -40,11 +44,15 @@ Why: Prevents hackers from browsing your files.
 
 ![directory change](https://github.com/user-attachments/assets/d933fda5-75af-4d3b-8a94-f261f1d9d49c)
 
-Step 4 : 5. Hide Apache Version and OS Info, and Open the security configuration file and Change these lines: ServerTokens Prod
+<hr>
+
+Step 4 : Hide Apache Version and OS Info, and Open the security configuration file and Change these lines: ServerTokens Prod
 ServerSignature Off.
 Why: Prevents hackers from knowing your server’s software and version.
 
 ![Hide Apache Version and OS Info](https://github.com/user-attachments/assets/528d9f5b-d1ea-4a3a-9189-ab67d5dc4e64)
+
+<hr>
 
 Step 5 : ModSecurity (Web Application Firewall), and we will install Modsecurity and enable and configure it, Then restart the apache2.
 Why: Blocks common web attacks like SQL injection.
@@ -53,12 +61,16 @@ Why: Blocks common web attacks like SQL injection.
 
 ![enabling mod security](https://github.com/user-attachments/assets/995e4cfb-2f2f-46c4-b540-c1976a7d6146)
 
+<hr>
+
 Step 6 :  HTTPS (SSL/TLS), and Install Certbot and encrypt the web server Using SSL certificate, and we have to Follow the prompts to secure domain.
 Why: Encrypts data between your server and users.
 
 ![ssl and tls](https://github.com/user-attachments/assets/13b1e126-de4e-4b01-a479-aff070c990ae)
 
 ![SSL certificate](https://github.com/user-attachments/assets/b73e68be-f472-4355-add9-94287cf3cec7)
+
+<hr>
 
 Step 7 : Regularly Monitor Logs, and check apache logs. 
 Why: Helps detect suspicious activity.
