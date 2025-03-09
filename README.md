@@ -25,19 +25,19 @@ Let's fortify our Apache web server on Ubuntu with strong security measures. Thi
 
 ## Steps
 
-Step 1 : Installing apache2 
+**Step 1** : Installing apache2 
 
 ![installation](https://github.com/user-attachments/assets/94988259-0461-44de-b7ad-c5a0027821a9)
 
 <hr>
 
-Step 2 :  Secure Apache with a Firewall, Because it will Blocks unauthorized access to my server.
+**Step 2** :  Secure Apache with a Firewall, Because it will Blocks unauthorized access to my server.
 
 ![ufw configuration   start apache2](https://github.com/user-attachments/assets/2917daef-2796-48d2-a045-b58855549541)
 
 <hr>
 
-Step 3 : Disable Directory Listing, first we will Open the Apache configuration file and Find the <Directory> section and change Options Indexes to Options -Indexes:
+**Step 3** : Disable Directory Listing, first we will Open the Apache configuration file and Find the <Directory> section and change Options Indexes to Options -Indexes:
 Why: Prevents hackers from browsing your files.
 
 ![Hide Apache Version and OS Info](https://github.com/user-attachments/assets/1a280ae3-0b2a-427c-914b-10ccae359e97)
@@ -46,7 +46,7 @@ Why: Prevents hackers from browsing your files.
 
 <hr>
 
-Step 4 : Hide Apache Version and OS Info, and Open the security configuration file and Change these lines: ServerTokens Prod
+**Step 4 **: Hide Apache Version and OS Info, and Open the security configuration file and Change these lines: ServerTokens Prod
 ServerSignature Off.
 Why: Prevents hackers from knowing your server’s software and version.
 
@@ -54,7 +54,7 @@ Why: Prevents hackers from knowing your server’s software and version.
 
 <hr>
 
-Step 5 : ModSecurity (Web Application Firewall), and we will install Modsecurity and enable and configure it, Then restart the apache2.
+**Step 5** : ModSecurity (Web Application Firewall), and we will install Modsecurity and enable and configure it, Then restart the apache2.
 Why: Blocks common web attacks like SQL injection.
 
 ![Use ModSecurity](https://github.com/user-attachments/assets/09c18b51-eb04-499a-89ca-ebd305399e15)
@@ -63,7 +63,7 @@ Why: Blocks common web attacks like SQL injection.
 
 <hr>
 
-Step 6 :  HTTPS (SSL/TLS), and Install Certbot and encrypt the web server Using SSL certificate, and we have to Follow the prompts to secure domain.
+**Step 6 **:  HTTPS (SSL/TLS), and Install Certbot and encrypt the web server Using SSL certificate, and we have to Follow the prompts to secure domain.
 Why: Encrypts data between your server and users.
 
 ![ssl and tls](https://github.com/user-attachments/assets/13b1e126-de4e-4b01-a479-aff070c990ae)
@@ -72,7 +72,7 @@ Why: Encrypts data between your server and users.
 
 <hr>
 
-Step 7 : Regularly Monitor Logs, and check apache logs. 
+**Step 7 **: Regularly Monitor Logs, and check apache logs. 
 Why: Helps detect suspicious activity.
 
 ![Regularly Monitor Logs](https://github.com/user-attachments/assets/4c81996a-fb68-479a-bdff-ec3ce9fd0881)
