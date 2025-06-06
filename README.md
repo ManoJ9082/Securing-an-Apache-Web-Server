@@ -9,7 +9,7 @@ A hands-on security hardening project for Apache running on Ubuntu. This guide o
 - [🎯 Objective](#-objective)
 - [🛠️ Tools Used](#-tools-used)
 - [🧠 Skills Learned](#-skills-learned)
-- [📸 projectworkflow & images](#-projectworkflow&images)
+- [📸 projectworkflow](#-projectworkflow)
 - [📊 Summary](#-summary)
 - [📚 References](#-references)
 
