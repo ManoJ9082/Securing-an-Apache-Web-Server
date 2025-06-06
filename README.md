@@ -1,91 +1,119 @@
-# Securing-an-Apache-Web-Server
+# 🔒 Securing an Apache Web Server  
 
-## Objective
+A hands-on security hardening project for Apache running on Ubuntu. This guide outlines how to strengthen server defenses, protect sensitive data, and prevent common attack vectors — ensuring a stable and secure web hosting environment.
 
-Let's fortify our Apache web server on Ubuntu with strong security measures. This will protect sensitive data, keep our service running smoothly without interruptions, and maintain the integrity of our system against potential threats. By proactively boosting our server's security, we're committed to providing a safer and more reliable environment for our users and stakeholders.
+---
 
-### Skills Learned
+## 📖 Table of Contents
 
-- **System Administration:** Managed Ubuntu server efficiently.
-- **Web Server Configuration:** Installed and configured Apache.
-- **Firewall Management:** Secured server with UFW rules.
-- **SSL Implementation:** Used Let's Encrypt for HTTPS.
-- **Virtual Hosts:** Configured multiple websites on a single server.
-- **Security Best Practices:** Applied measures like ModSecurity and disabling directory listings.
-- **Monitoring:** Regularly updated and monitored server health.
-- **Troubleshooting:** Resolved security and performance issues.
+- [🎯 Objective](#-objective)
+- [🛠️ Tools Used](#-tools-used)
+- [🧠 Skills Learned](#-skills-learned)
+- [📸 Screenshots](#-screenshots)
+- [📊 Summary](#-summary)
+- [📚 References](#-references)
 
-### Tools Use
+## 🎯 Objective  
 
-- **Apache2:** For web server setup and configuration.
-- **UFW (Uncomplicated Firewall):** To manage firewall rules and enhance security.
-- **Certbot:** To obtain and install SSL certificates from Let's Encrypt.
-- **ModSecurity:** To provide web application firewall protection.
-- **Fail2Ban:** For monitoring and protecting against brute-force attacks.
+To proactively secure an Apache web server by applying proven security best practices, from firewall setup and directory restrictions to HTTPS implementation and log monitoring — building a reliable, attack-resilient environment for web services.
 
-## Steps
+---
 
-**Step 1** : Installing apache2 
+## 🛠️ Tools & Technologies  
 
-![installation](https://github.com/user-attachments/assets/94988259-0461-44de-b7ad-c5a0027821a9)
+- **Apache2** — Web server installation and configuration  
+- **UFW (Uncomplicated Firewall)** — Server firewall configuration  
+- **Certbot (Let’s Encrypt)** — Free SSL/TLS certificate issuance  
+- **ModSecurity** — Web Application Firewall (WAF)  
+- **Fail2Ban** — Protection against brute-force login attempts  
+- **Ubuntu Server** — Linux distribution hosting the Apache service  
 
-<hr>
+---
 
-**Step 2** :  Secure Apache with a Firewall, Because it will Blocks unauthorized access to my server.
+## 📚 Skills Learned  
 
-![ufw configuration   start apache2](https://github.com/user-attachments/assets/2917daef-2796-48d2-a045-b58855549541)
+- **Linux Server Administration**  
+- **Web Server Security Configuration**  
+- **Firewall Rule Management (UFW)**  
+- **SSL/TLS Implementation with Let's Encrypt**  
+- **Web Application Firewall (WAF) Setup**  
+- **Attack Surface Reduction**  
+- **Log Monitoring & Incident Detection**  
+- **Best Practices for Apache Hardening**
 
-<hr>
+---
 
-**Step 3** : Disable Directory Listing, first we will Open the Apache configuration file and Find the <Directory> section and change Options Indexes to Options -Indexes:
-Why: Prevents hackers from browsing your files.
+## 🚀 Project Workflow  
 
-![Hide Apache Version and OS Info](https://github.com/user-attachments/assets/1a280ae3-0b2a-427c-914b-10ccae359e97)
+### 📌 Step 1: Install Apache2  
 
-![directory change](https://github.com/user-attachments/assets/d933fda5-75af-4d3b-8a94-f261f1d9d49c)
+Installed Apache2 web server via package manager.  
 
-<hr>
+![Apache Installation](https://github.com/user-attachments/assets/94988259-0461-44de-b7ad-c5a0027821a9)
 
-**Step 4** : Hide Apache Version and OS Info, and Open the security configuration file and Change these lines: ServerTokens Prod
-ServerSignature Off.
-Why: Prevents hackers from knowing your server’s software and version.
+---
 
-![Hide Apache Version and OS Info](https://github.com/user-attachments/assets/528d9f5b-d1ea-4a3a-9189-ab67d5dc4e64)
+### 📌 Step 2: Configure UFW Firewall  
 
-<hr>
+Configured UFW to allow necessary web traffic and block unauthorized access.
 
-**Step 5** : ModSecurity (Web Application Firewall), and we will install Modsecurity and enable and configure it, Then restart the apache2.
-Why: Blocks common web attacks like SQL injection.
+![UFW Configuration](https://github.com/user-attachments/assets/2917daef-2796-48d2-a045-b58855549541)
 
-![Use ModSecurity](https://github.com/user-attachments/assets/09c18b51-eb04-499a-89ca-ebd305399e15)
+---
 
-![enabling mod security](https://github.com/user-attachments/assets/995e4cfb-2f2f-46c4-b540-c1976a7d6146)
+### 📌 Step 3: Disable Directory Listing  
 
-<hr>
+Prevented file and folder listings via browser by setting:
 
-**Step 6** :  HTTPS (SSL/TLS), and Install Certbot and encrypt the web server Using SSL certificate, and we have to Follow the prompts to secure domain.
-Why: Encrypts data between your server and users.
+![image](https://github.com/user-attachments/assets/e1b96fff-1598-41f8-b91a-426d9881e459)
 
-![ssl and tls](https://github.com/user-attachments/assets/13b1e126-de4e-4b01-a479-aff070c990ae)
+---
 
-![SSL certificate](https://github.com/user-attachments/assets/b73e68be-f472-4355-add9-94287cf3cec7)
+### 📌 Step 4: Hide Apache Version and OS Info
+Hid sensitive server information by setting:
 
-<hr>
+ServerTokens Prod
+ServerSignature Off
 
-**Step 7** : Regularly Monitor Logs, and check apache logs. 
-Why: Helps detect suspicious activity.
+---
 
-![Regularly Monitor Logs](https://github.com/user-attachments/assets/4c81996a-fb68-479a-bdff-ec3ce9fd0881)
+### 📌 Step 5: Install & Enable ModSecurity
+Added a Web Application Firewall to block common web attacks like SQL injection.
+
+![image](https://github.com/user-attachments/assets/a05bd0f1-d659-4318-be4b-e71f338755b6)
+
+![image](https://github.com/user-attachments/assets/6773cccf-0af0-45ce-878c-48f7197bd7fc)
+
+---
+
+### 📌 Step 6: Enable HTTPS with SSL/TLS
+Installed Certbot and obtained SSL certificates via Let’s Encrypt.
+
+![image](https://github.com/user-attachments/assets/3ff8c9a4-bad5-4d3f-8fb0-c93525bcc1bf)
+
+![image](https://github.com/user-attachments/assets/47044fd5-5e92-444d-9b4a-2dee319dfb63)
+
+---
+
+### 📌 Step 7: Regularly Monitor Server Logs
+Reviewed Apache access and error logs to detect anomalies.
+
+![image](https://github.com/user-attachments/assets/13c5a6d0-5a4d-4ed1-b62c-cd94978dbf3b)
+
+---
+
+## 📊 Summary
+This project demonstrates proactive server hardening techniques for a public-facing web service, safeguarding against unauthorized access, data breaches, and common attacks. Essential for any cybersecurity analyst or system administrator looking to secure their Linux web infrastructure.
+
+
+## 📚 References
+
+- Apache Security Best Practices
+- UFW Documentation
+- Certbot for Let's Encrypt
+- ModSecurity Handbook
 
 
 
-
-
-
-
-
-
-
-
-
+🚀 Author: Manoj Mothukuru
 
