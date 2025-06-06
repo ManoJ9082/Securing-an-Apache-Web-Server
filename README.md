@@ -113,7 +113,7 @@ This project demonstrates proactive server hardening techniques for a public-fac
 - Certbot for Let's Encrypt
 - ModSecurity Handbook
 
-
+---
 
 🚀 Author: Manoj Mothukuru
 
